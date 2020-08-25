@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<tweener id="animateOpen0001" transition="easenone" time="1.5" alpha="1" />
+	
+	<tweener id="animateClose0021" transition="easenone" time="1.5" alpha="0" />
+	
+	<iAnimator id="fl-package" qName="Motion" type="class" definition="assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::FLPackageAnimator" />
+	
+	<Motion duration="32" id="test-animation" xmlns="fl.motion.*" xmlns:geom="flash.geom.*" xmlns:filters="flash.filters.*">
+		<source>
+			<Source frameRate="12" x="185.95" y="196.5" scaleX="1" scaleY="1" rotation="0" elementType="movie clip" symbolName="Symbol 1">
+				<dimensions>
+					<geom:Rectangle left="0" top="0" width="234" height="111"/>
+				</dimensions>
+				<transformationPoint>
+					<geom:Point x="0.5" y="0.5"/>
+				</transformationPoint>
+			</Source>
+		</source>
+
+		<Keyframe index="0" tweenSnap="true" tweenSync="true">
+			<tweens>
+				<SimpleEase ease="0"/>
+			</tweens>
+		</Keyframe>
+
+		<Keyframe index="31" x="280" y="-139"/>
+	</Motion>
+	
+</data>

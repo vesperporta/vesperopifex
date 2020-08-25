@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/library.schema.xsd" xsi:noNamespaceSchemaLocation="library.schema.xsd">
+	<system>
+		<load><![CDATA[assets/swf/ui-resources.swf]]></load>
+		<load><![CDATA[assets/swf/video-ui-resources.swf]]></load>
+		<font id="futura"><![CDATA[assets/swf/futura-latin.swf::com.vesperopifex.fonts._FuturaLatin::_FuturaBook,_FuturaLight,_FuturaMedium,_FuturaHeavy,_FuturaExtraBold,_FuturaCondensed,_FuturaCondensedLight,_FuturaCondensedExtraBd]]></font>
+		<font><![CDATA[assets/swf/garamond-latin.swf::com.vesperopifex.fonts._GaramondPro::_GaramondProRegular,_GaramondProBold,_GaramondProItalic,_GaramondProBoldItalic]]></font>
+		<browserIntegration id="swfAddress">
+			<graphic id="swf-address-dispatcher">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::BrowserInteraction]]></urlClass>
+			</graphic>
+		</browserIntegration>
+		<preloadvisualstack id="default-preloader">
+			<graphic id="../../assets/swf/ui-resources.swf" type="library" definition="com.vesperopifex.display.utils.PreloadVisualStack::PreloadingVisual" />
+			<graphic id="../../assets/swf/video-ui-resources.swf" type="library" definition="com.vesperopifex.display.utils.PreloadVisualStack::PreloadingVisual" />
+			<graphic id="../../assets/swf/futura-latin.swf" type="library" definition="com.vesperopifex.display.utils.PreloadVisualStack::PreloadingVisual" />
+			<graphic id="../../assets/swf/garamond-latin.swf" type="library" definition="com.vesperopifex.display.utils.PreloadVisualStack::PreloadingVisual" />
+		</preloadvisualstack>
+	</system>
+	
+	<page active="true" id="home" >
+		
+		<content>
+			
+			<p class="main-menu-button">hello world!</p>
+			
+			<graphic id="test-text" type="text" y="40">
+				<field autoSize="left" embedFonts="true" selectable="true"><![CDATA[<p class="main-menu-button">another world!</p>]]></field>
+				<style><![CDATA[layout/css/normaltext.css]]></style>
+				<style id="jp"><![CDATA[layout/css/jp.css]]></style>
+			</graphic>
+			
+			<item x="50" y="50" id="site-logo-home">
+				<xmlLib><![CDATA[general-use-button]]></xmlLib>
+				<state id="hit_test">
+					<application><![CDATA[hit_test]]></application>
+					<item id="site-logo-bounds">
+						<xmlLib><![CDATA[site-logo-bounds]]></xmlLib>
+					</item>
+				</state>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<item id="site-logo-visual">
+						<xmlLib><![CDATA[site-logo]]></xmlLib>
+					</item>
+				</state>
+				<event context="changePage" action="home/main" />
+			</item>
+			
+			<item id="blog-button" x="350" y="25">
+				<xmlLib><![CDATA[main-menu-button]]></xmlLib>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<graphic id="button-visual">
+						<field><![CDATA[<span class="main-menu-button"><dictLib>blog-title</dictLib></span>]]></field>
+					</graphic>
+				</state>
+				<event context="changePage" action="home/blog" />
+			</item>
+			
+			<item id="vesper-opifex-button" x="420" y="25">
+				<xmlLib><![CDATA[main-menu-button]]></xmlLib>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<graphic id="button-visual">
+						<field><![CDATA[<span class="main-menu-button"><dictLib>vesper-opifex-title</dictLib></span>]]></field>
+					</graphic>
+				</state>
+				<event context="changePage" action="home/vesper-opifex" />
+			</item>
+			
+			<item id="actionscript-button" x="550" y="25">
+				<xmlLib><![CDATA[main-menu-button]]></xmlLib>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<graphic id="button-visual">
+						<field><![CDATA[<span class="main-menu-button"><dictLib>actionscript-title</dictLib></span>]]></field>
+					</graphic>
+				</state>
+				<event context="changePage" action="home/actionscript" />
+			</item>
+			
+			<item id="examples-button" x="675" y="25">
+				<xmlLib><![CDATA[main-menu-button]]></xmlLib>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<graphic id="button-visual">
+						<field><![CDATA[<span class="main-menu-button"><dictLib>examples-title</dictLib></span>]]></field>
+					</graphic>
+				</state>
+				<event context="changePage" action="home/examples" />
+			</item>
+			
+			<item id="links-button" x="800" y="25">
+				<xmlLib><![CDATA[main-menu-button]]></xmlLib>
+				<state id="out, over, down, visited, active">
+					<application><![CDATA[all]]></application>
+					<graphic id="button-visual">
+						<field><![CDATA[<span class="main-menu-button"><dictLib>links-title</dictLib></span>]]></field>
+					</graphic>
+				</state>
+				<event context="changePage" action="home/links" />
+			</item>
+			
+		</content>
+		
+		<page active="true" id="main">
+			
+			<table x="50" y="200">
+				<cell>
+					<item id="home-title">
+						<xmlLib><![CDATA[generic-text]]></xmlLib>
+						<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib>1<dictLib>home-title</dictLib></p>]]></field>
+					</item>
+				</cell>
+				
+				<cell>
+					<item id="home-title">
+						<xmlLib><![CDATA[generic-text]]></xmlLib>
+						<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib>2<dictLib>home-title</dictLib></p>]]></field>
+					</item>
+				</cell>
+				
+				<cell>
+					<item id="home-title">
+						<xmlLib><![CDATA[generic-text]]></xmlLib>
+						<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib>3<dictLib>home-title</dictLib></p>]]></field>
+					</item>
+				</cell>
+				
+				<cell>
+					<item id="home-title">
+						<xmlLib><![CDATA[generic-text]]></xmlLib>
+						<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib>4<dictLib>home-title</dictLib></p>]]></field>
+					</item>
+				</cell>
+			</table>
+			
+		</page>
+			
+		<page active="true" id="blog" alpha="0">
+			
+			<content>
+				
+				<tween animator="tweener" id="animateOpen" lib="animateOpen0001" />
+				<tween animator="tweener" id="animateClose" lib="animateClose0021" />
+				
+				<item id="blog-title" x="350" y="72">
+					<xmlLib><![CDATA[generic-text]]></xmlLib>
+					<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>blog-title</dictLib></p>]]></field>
+				</item>
+				
+				<item id="rss-reader" x="50" y="150" enforced="rss" feed="http://blog.delicious.com/blog/feed">
+					<xmlLib><![CDATA[rss-feed-reader]]></xmlLib>
+				</item>
+				
+				<graphic id="test-text" x="650" y="100" type="text">
+					<field width="200" height="400" wordWrap="true" embedFonts="true" autoSize="left"><![CDATA[<span class="rss-p"><dictLib>test-text-1</dictLib></span>]]></field>
+					<style><![CDATA[layout/css/normaltext.css]]></style>
+					<style id="jp"><![CDATA[layout/css/jp.css]]></style>
+				</graphic>
+				
+			</content>
+			
+			<page active="true" id="flash">
+				
+				<content>
+					
+				</content>
+				
+			</page>
+			
+			<page active="true" id="actionscript">
+				
+				<content>
+					
+				</content>
+				
+			</page>
+			
+			<page active="true" id="flex">
+				
+				<content>
+					
+				</content>
+				
+			</page>
+			
+			<page active="true" id="air">
+				
+				<content>
+					
+				</content>
+				
+			</page>
+			
+			<page active="true" id="flash-media-server">
+				
+				<content>
+					
+				</content>
+				
+			</page>
+			
+		</page>
+		
+		<page active="true" id="vesper-opifex">
+			
+			<content>
+				
+				<item id="blog-title" x="350" y="72">
+					<xmlLib><![CDATA[generic-text]]></xmlLib>
+					<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>vesper-opifex-title</dictLib></p>]]></field>
+				</item>
+				
+				<graphic x="50" y="200" enforced="flv" id="video-0" type="video">
+					<url><![CDATA[http://v24.lscache7.googlevideo.com/videoplayback?begin=122170&itag=22&ip=193.201.135.244&signature=3D0E5B712E33E5961269085B91E3670A1C3A0CF4.98A07A0FCA442C177B8825630523F11BCA4ECDFD&sparams=id%2Cexpire%2Cip%2Cipbits%2Citag&sver=3&expire=1241101811&key=yt1&ipbits=0&id=f612108eb3074efe]]></url>
+					<videocontrolpanel type="simple-video-control-panel" padding_h="10" x="50" y="250">
+						<graphic id="play-pause-button" type="library" definition="com.vesperopifex.display.ui.state.SimpleStateDisplayObject">
+							<state id="playing">
+								<graphic id="playing-button" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::PlayingButton" />
+							</state>
+							<state id="paused">
+								<graphic id="paused-button" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::PausedButton" />
+							</state>
+						</graphic>
+						<graphic id="muted-audible-button" type="library" definition="com.vesperopifex.display.ui.state.SimpleStateDisplayObject">
+							<state id="audible">
+								<graphic id="audible-button" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::AudibleButton" />
+							</state>
+							<state id="muted">
+								<graphic id="muted-button" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::MutedButton" />
+							</state>
+						</graphic>
+						<graphic id="fast-rewind" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::FastRewindButton" />
+						<graphic id="rewind" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::RewindButton" />
+						<graphic id="forward" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::ForwardButton" />
+						<graphic id="fast-forward" type="class" definition="assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::FastForwardButton" />
+					</videocontrolpanel>
+					
+				</graphic>
+				
+			</content>
+			
+		</page>
+		
+		<page active="true" id="actionscript">
+			
+			<content>
+				
+				<item id="blog-title" x="350" y="72">
+					<xmlLib><![CDATA[generic-text]]></xmlLib>
+					<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>actionscript-title</dictLib></p>]]></field>
+				</item>
+				
+				<item id="data-button-single" x="350" y="300">
+					<xmlLib><![CDATA[general-use-button-data]]></xmlLib>
+					<event context="dataupdate" action="home/actionscript::data-button-single,home/actionscript::data-recieve" />
+				</item>
+				
+				<graphic id="data-recieve" x="450" y="300" type="class" definition="assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::DataReciever" />
+				
+			</content>
+			
+		</page>
+		
+		<page active="true" id="examples">
+			
+			<content>
+				
+				<item id="blog-title" x="350" y="72">
+					<xmlLib><![CDATA[generic-text]]></xmlLib>
+					<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>examples-title</dictLib></p>]]></field>
+				</item>
+				
+			</content>
+			
+			<img src="assets/png/Picture-1.jpg" alpha="0.5" scaleX="0.2" scaleY="0.2" y="300" x="200"/>
+			
+		</page>
+		
+		<page active="true" id="links">
+			
+			<content>
+				
+				<item id="blog-title" x="350" y="72">
+					<xmlLib><![CDATA[generic-text]]></xmlLib>
+					<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>links-title</dictLib></p>]]></field>
+				</item>
+				
+			</content>
+			
+		</page>
+		
+	</page>
+	
+</data>

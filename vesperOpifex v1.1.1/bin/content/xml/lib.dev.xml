@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/library.schema.xsd" xsi:noNamespaceSchemaLocation="library.schema.xsd">
+	
+	<item id="site-logo">
+		<type><![CDATA[class]]></type>
+		<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::LogoVisual]]></urlClass>
+	</item>
+	
+	<item id="site-logo-bounds">
+		<type><![CDATA[class]]></type>
+		<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::LogoVisualBounds]]></urlClass>
+	</item>
+	
+	<item id="generic-text" displayindex="top">
+		<type><![CDATA[text]]></type>
+		<field autoSize="left" width="500" height="50" embedFonts="true" selectable="false" />
+		<style><![CDATA[../../layout/css/normaltext.css]]></style>
+		<style id="jp"><![CDATA[../../layout/css/jp.css]]></style>
+	</item>
+	
+	<item id="main-menu-button">
+		<xmlLib><![CDATA[general-use-button]]></xmlLib>
+		<state id="out, over, down, visited, active">
+			<application><![CDATA[all]]></application>
+			<graphic id="button-visual">
+				<type><![CDATA[text]]></type>
+				<field embedFonts="true" autoSize="left" />
+				<style><![CDATA[../../layout/css/normaltext.css]]></style>
+				<style id="jp"><![CDATA[../../layout/css/jp.css]]></style>
+			</graphic>
+		</state>
+	</item>
+	
+	<!-- START test of data button -->
+	
+	<item id="general-use-button-data">
+		<type><![CDATA[class]]></type>
+		<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::DataButtonSender]]></urlClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="rect_hit_test">
+				<type><![CDATA[vector]]></type>
+				<rect width="100" height="100" />
+				<style styletype="gradientFill" type="linear" colors="0x00ffff,0xff0000" alphas="1,0" ratios="0,255" matrix="100,100,0,0,0" spreadMethod="pad" interpolationMethod="rgb" focalPointRatio="0" />
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+		</state>
+		<state id="out, over, down, visited, active">
+			<application><![CDATA[all]]></application>
+			<graphic id="rect_hit_test">
+				<type><![CDATA[vector]]></type>
+				<rect width="100" height="100" />
+				<style styletype="gradientFill" type="linear" colors="0x000000,0xff00ff" alphas="1,0" ratios="0,255" matrix="100,100,0,0,0" spreadMethod="pad" interpolationMethod="rgb" focalPointRatio="0" />
+			</graphic>
+		</state>
+	</item>
+	
+	<!-- END test of data button -->
+	
+	<!-- START general button -->
+	
+	<item id="general-use-button">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+		</state>
+		<state id="out, over, down, visited, active">
+			<application><![CDATA[all]]></application>
+		</state>
+	</item>
+	
+	<!-- END general button -->
+	
+	<!-- START RSS feed reader -->
+	
+	<item id="rss-feed-reader" displayindex="top">
+		<type><![CDATA[class]]></type>
+		<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::RSSFeedReader]]></urlClass>
+		
+		<graphic id="html-textfield">
+			<type><![CDATA[text]]></type>
+			<field width="500" height="420" multiline="true" embedFonts="true" wordWrap="true" />
+			<style><![CDATA[../../layout/css/normaltext.css]]></style>
+			<style id="jp"><![CDATA[../../layout/css/jp.css]]></style>
+		</graphic>
+		
+		<item id="scroll-textfield" x="510">
+			<xmlLib><![CDATA[blog-vertical-scroll]]></xmlLib>
+		</item>
+		
+		<eventdata>
+			<context id=""><![CDATA[textevent]]></context>
+		</eventdata>
+	</item>
+	
+	<!-- END RSS feed reader -->
+	
+	<!-- START vertical scroll bar -->
+	
+	<item id="blog-vertical-scroll">
+		<type><![CDATA[class]]></type>
+		<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::GenericScrollBar]]></urlClass>
+		
+		<graphic id="background-active" x="0" y="0">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollBackground]]></urlClass>
+		</graphic>
+		
+		<graphic id="background-inactive" x="0" y="0">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollBackgroundInactive]]></urlClass>
+		</graphic>
+		
+		<item id="scrub-active" dragHeight="231.4" dragWidth="0" dragX="0" dragY="94.7" x="0" y="0">
+			<xmlLib><![CDATA[vertical-scroll-scrub]]></xmlLib>
+		</item>
+		
+		<graphic id="scrub-inactive" x="0" y="0">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollScrubInactive]]></urlClass>
+		</graphic>
+		
+		<item id="scroll-up-active" x="0" y="20">
+			<xmlLib><![CDATA[vertical-scroll-up]]></xmlLib>
+		</item>
+		
+		<graphic id="scroll-up-inactive" x="0" y="20">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpInactive]]></urlClass>
+		</graphic>
+		
+		<item id="scroll-up-end-active" x="0" y="0">
+			<xmlLib><![CDATA[vertical-scroll-up-end]]></xmlLib>
+		</item>
+		
+		<graphic id="scroll-up-end-inactive" x="0" y="0">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpEndInactive]]></urlClass>
+		</graphic>
+		
+		<item id="scroll-down-active" x="0" y="326.8">
+			<xmlLib><![CDATA[vertical-scroll-down]]></xmlLib>
+		</item>
+		
+		<graphic id="scroll-down-inactive" x="0" y="326.8">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownInactive]]></urlClass>
+		</graphic>
+		
+		<item id="scroll-down-end-active" x="0" y="356.8">
+			<xmlLib><![CDATA[vertical-scroll-down-end]]></xmlLib>
+		</item>
+		
+		<graphic id="scroll-down-end-inactive" x="0" y="356.8">
+			<type><![CDATA[class]]></type>
+			<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownEndInactive]]></urlClass>
+		</graphic>
+		
+	</item>
+	
+	<item id="vertical-scroll-scrub">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleDragButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollScrub]]></urlClass>
+			</graphic>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollScrubOver]]></urlClass>
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollScrubDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollScrub]]></urlClass>
+			</graphic>
+		</state>
+	</item>
+	
+	<item id="vertical-scroll-up">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUp]]></urlClass>
+			</graphic>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpOver]]></urlClass>
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUp]]></urlClass>
+			</graphic>
+		</state>
+	</item>
+	
+	<item id="vertical-scroll-up-end">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpEnd]]></urlClass>
+			</graphic>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpEndOver]]></urlClass>
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpEndDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollUpEnd]]></urlClass>
+			</graphic>
+		</state>
+	</item>
+	
+	<item id="vertical-scroll-down">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownOver]]></urlClass>
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDown]]></urlClass>
+			</graphic>
+		</state>
+	</item>
+	
+	<item id="vertical-scroll-down-end">
+		<type><![CDATA[library]]></type>
+		<libraryClass><![CDATA[com.vesperopifex.display.ui.SimpleButton]]></libraryClass>
+		<state id="up">
+			<application><![CDATA[up]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownEnd]]></urlClass>
+			</graphic>
+		</state>
+		<state id="over">
+			<application><![CDATA[over]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownEndOver]]></urlClass>
+			</graphic>
+		</state>
+		<state id="down">
+			<application><![CDATA[down]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownEndDown]]></urlClass>
+			</graphic>
+		</state>
+		<state id="hit_test">
+			<application><![CDATA[hit_test]]></application>
+			<graphic id="visual-graphic">
+				<type><![CDATA[class]]></type>
+				<urlClass><![CDATA[../../assets/swf/ui-resources.swf::com.vesperopifex.display.classes.UiLibrary::VerticalScrollDownEnd]]></urlClass>
+			</graphic>
+		</state>
+	</item>
+	
+	<!-- END vertical scroll bar -->
+	
+</data>

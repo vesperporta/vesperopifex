@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xml:lang="en">
+	
+	<xs:element name="item" type="xs:string">
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:element>
+	
+	<xs:element name="font" type="xs:string">
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:element>
+	
+</xs:schema>

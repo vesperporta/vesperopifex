@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/directory.schema.xsd" xsi:noNamespaceSchemaLocation="directory.schema.xsd">
+	<!-- all XML entries which are to be included in the runtime compile of the final data set have to be listed here -->
+	<!-- dictionary entries will be treated differently and commented accordingly -->
+	<!-- XML node(s) library (for self creation of elements) -->
+	<xmlLib active="true"><![CDATA[content/xml/lib.xml]]></xmlLib>
+	
+	<!-- localisation of the application if available, otherwise defaults to type default -->
+		<!-- no localisation tags are required from flash variables -->
+		<!-- 
+			available languages are:
+				Language				Value
+				Czech					cs
+				Danish					da
+				Dutch					nl
+				English					en
+				Finnish					fi
+				French					fr
+				German					de
+				Hungarian				hu
+				Italian					it
+				Japanese				ja
+				Korean					ko
+				Norwegian				no
+				Other/unknown			xu
+				Polish					pl
+				Portuguese				pt
+				Russian					ru
+				Simplified Chinese		zh-CN
+				Spanish					es
+				Swedish					sv
+				Traditional Chinese		zh-TW
+				Turkish					tr
+			see http://www.ietf.org/rfc/rfc4646.txt for further details
+		-->
+	<dictionary active="true" type="base"><![CDATA[content/xml/dictionaries/]]></dictionary>
+	<dictionary active="true" type="default"><![CDATA[en]]></dictionary>
+	<dictionary active="true"><![CDATA[fr]]></dictionary>
+	<dictionary active="true"><![CDATA[jp]]></dictionary>
+	
+	<!-- for assosiated motion tweens for specific objects referencing the 'id' of a particular animation data node -->
+	<animation><![CDATA[content/xml/animation/general.xml]]></animation>
+	
+	<!-- the main content XML giving the layout of the XML and subsequent pages -->
+	<content active="true"><![CDATA[content/xml/content.xml]]></content>
+</data>

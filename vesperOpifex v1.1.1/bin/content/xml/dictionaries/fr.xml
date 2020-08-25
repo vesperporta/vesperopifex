@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/dictionary.schema.xsd" xsi:noNamespaceSchemaLocation="dictionary.schema.xsd">
+	<!-- title copy -->
+	<item id="title-deliminator"><![CDATA[ /    ]]></item>
+	<item id="blog-title"><![CDATA[blog]]></item>
+	<item id="vesper-opifex-title"><![CDATA[vesperOpifex]]></item>
+	<item id="actionscript-title"><![CDATA[actionscript]]></item>
+	<item id="examples-title"><![CDATA[exemples]]></item>
+	<item id="links-title"><![CDATA[Liens]]></item>
+</data>

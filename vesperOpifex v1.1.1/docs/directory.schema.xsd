@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xml:lang="en">
+	
+	<xs:element name="xmlLib" type="xs:string">
+		<xs:attribute name="active" type="xs:boolean"/>
+	</xs:element>
+	
+	<xs:element name="dictionary" type="xs:string">
+		<xs:attribute name="active" type="xs:boolean"/>
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="base"/>
+					<xs:enumeration value="default"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:element>
+	
+	<xs:element name="animation" type="xs:string">
+		<xs:attribute name="active" type="xs:boolean"/>
+	</xs:element>
+	
+	<xs:element name="content" type="xs:string">
+		<xs:attribute name="active" type="xs:boolean"/>
+	</xs:element>
+	
+</xs:schema>

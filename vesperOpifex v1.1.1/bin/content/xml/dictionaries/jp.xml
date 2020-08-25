@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/dictionary.schema.xsd" xsi:noNamespaceSchemaLocation="dictionary.schema.xsd">
+	<!-- title copy -->
+	<item id="title-deliminator"><![CDATA[ /    ]]></item>
+	<item id="blog-title"><![CDATA[ブログ]]></item>
+	<item id="vesper-opifex-title"><![CDATA[vesperOpifex]]></item>
+	<item id="actionscript-title"><![CDATA[アクション]]></item>
+	<item id="examples-title"><![CDATA[例]]></item>
+	<item id="links-title"><![CDATA[リンク]]></item>
+	<!-- button copy -->
+	<!-- test text -->
+	<item id="test-text-1"><![CDATA[プリファ インフォテ レイテリング ディア クほ, トワク と会意味 キュメント セシビリティ のな びつける マルチメ アクセシビ アクセ ルビ, コンテン ビスとレイティ ルにするために のな ユザエ, ウェブオント インタラクション リティガイドライン ツアク 寛会 功久 スタイル マルチメ ウェブコンテン ップに, サイト作成のヒント ビスとレイティ ウェブコ わった の徴 にによる プロセスド でウェブにと ィに 健二仕, パス と会意味 セシビリテ のため, イドライン マイクロソフト その他 アク ウェ への切りえ ンツアクセシ ツアク, スタイル コンテン さぁはじ クセス の徴 ユザエ をマ ふべからず リティにする を始めてみよう, 拡なマ パス ブコンテ セシビリ プラニングリサチ]]></item>
+	<!-- font import -->
+	<font id="futura"><![CDATA[assets/swf/kozgopro-japanese-all.swf::com.vesperopifex.fonts._KozGoProJapaneseAll::_KozGoProRegular,_KozGoProLight,_KozGoProMedium,_KozGoProHeavy]]></font>
+</data>

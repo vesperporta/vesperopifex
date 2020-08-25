@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xml:lang="en">
+	
+	<xs:element name="item" type="itemDisplayObject"/>
+	
+	<xs:element name="page" type="pageDisplayObject"/>
+	
+	<xs:element name="system">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="audio" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="stream" type="xs:string">
+								<xs:complexType>
+									<xs:attribute name="bufferTime" type="xs:int"/>
+									<xs:attribute name="checkPolicyFile" type="xs:boolean"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="font" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="id" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="load" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="graphicDisplayObject">
+		<xs:sequence>
+			<xs:element name="tween" type="tweenObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="alpha" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="blendMode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cacheAsBitmap" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="definition" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="displayindex" type="displayIndexPosition" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dragHeight" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dragWidth" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dragX" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dragY" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="enforced" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="field" type="fieldDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="height" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="libraryClass" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="rotation" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="type" type="objectType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="scaleX" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="scaleY" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="style" type="graphicStyleObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="urlClass" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="visible" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="width" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="x" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="y" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="videocontrolpanel" type="tableDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="table" type="tableDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="rect" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="roundrectangle" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="rndrect" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="circle" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="circ" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ellipse" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="elli" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="triangle" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tri" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="polygon" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="poly" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="point" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="moveTo" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="lineTo" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="curveTo" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="endFill" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="clear" type="graphicDrawDisplayObject" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="eventdata" type="eventContainerObject"/>
+			<xs:element name="event" type="eventObject"/>
+			<xs:element name="state" type="stateDisplayObject"/>
+			<xs:any minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="attDisplayObject"/>
+		<xs:attributeGroup ref="attItemDisplayObject"/>
+		<xs:anyAttribute/>
+	</xs:complexType>
+	
+	<xs:complexType name="itemDisplayObject">
+		<xs:complexContent>
+			<xs:extension base="graphicDisplayObject">
+				<xs:sequence>
+					<xs:element name="graphic" type="graphicDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="item" type="itemDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="table" type="tableDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="xmlLib" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="pageDisplayObject">
+		<xs:complexContent>
+			<xs:extension base="graphicDisplayObject">
+				<xs:sequence>
+					<xs:element name="content" minOccurs="0" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="graphic" type="graphicDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element name="item" type="itemDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element name="table" type="tableDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="page" type="pageDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="fieldDisplayObject">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="alpha" type="xs:decimal"/>
+				<xs:attribute name="alwaysShowSelection" type="xs:boolean" />
+				<xs:attribute name="antiAliasType" type="xs:string" />
+				<xs:attribute name="autoSize" type="xs:string" />
+				<xs:attribute name="background" type="xs:boolean" />
+				<xs:attribute name="backgroundColor" type="xs:unsignedInt" />
+				<xs:attribute name="blendMode" type="xs:string" />
+				<xs:attribute name="border" type="xs:boolean" />
+				<xs:attribute name="borderColor" type="xs:unsignedInt" />
+				<xs:attribute name="cacheAsBitmap" type="xs:boolean" />
+				<xs:attribute name="condenseWhite" type="xs:boolean" />
+				<xs:attribute name="displayAsPassword" type="xs:boolean" />
+				<xs:attribute name="embedFonts" type="xs:boolean" />
+				<xs:attribute name="gridFitType" type="xs:string" />
+				<xs:attribute name="height" type="xs:decimal" />
+				<xs:attribute name="maxChars" type="xs:integer" />
+				<xs:attribute name="mouseWheelEnabled" type="xs:boolean" />
+				<xs:attribute name="multiline" type="xs:boolean" />
+				<xs:attribute name="restrict" type="xs:string" />
+				<xs:attribute name="rotation" type="xs:decimal"/>
+				<xs:attribute name="selectable" type="xs:boolean" />
+				<xs:attribute name="sharpness" type="xs:integer" />
+				<xs:attribute name="textColor" type="xs:unsignedInt" />
+				<xs:attribute name="thickness" type="xs:decimal" />
+				<xs:attribute name="type" type="xs:string" />
+				<xs:attribute name="useRichTextClipboard" type="xs:boolean" />
+				<xs:attribute name="wordWrap" type="xs:boolean" />
+				<xs:attributeGroup ref="attDisplayObject"/>
+				<xs:attributeGroup ref="attInteractiveObject"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tweenObject">
+		<xs:attributeGroup ref="attTweenObject"/>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="attTweenObject">
+		<xs:attribute name="animator" type="xs:string"/>
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="lib" type="xs:string"/>
+	</xs:attributeGroup>
+	
+	<xs:complexType name="cellDisplayObject">
+		<xs:sequence>
+			<xs:element name="graphic" type="graphicDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="item" type="itemDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="attDisplayObject"/>
+		<xs:attribute name="align" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction>
+					<xs:enumeration value="center"/>
+					<xs:enumeration value="bottom"/>
+					<xs:enumeration value="bottom_left"/>
+					<xs:enumeration value="bottom_right"/>
+					<xs:enumeration value="left"/>
+					<xs:enumeration value="none"/>
+					<xs:enumeration value="right"/>
+					<xs:enumeration value="top"/>
+					<xs:enumeration value="top_left"/>
+					<xs:enumeration value="top_right"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="background" type="xs:boolean"/>
+		<xs:attribute name="backgroundAlpha" type="xs:decimal"/>
+		<xs:attribute name="backgroundColor" type="xs:unsignedInt"/>
+		<xs:attribute name="border" type="xs:boolean"/>
+		<xs:attribute name="borderAlpha" type="xs:decimal"/>
+		<xs:attribute name="borderColor" type="xs:unsignedInt"/>
+		<xs:attribute name="borderWidth" type="xs:decimal"/>
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="relativePosition" type="xs:boolean"/>
+		<xs:attribute name="rounded" type="xs:decimal"/>
+		<xs:attribute name="spanRows" type="xs:int"/>
+		<xs:attribute name="spanColumns" type="xs:int"/>
+		<xs:attribute name="stretch" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction>
+					<xs:enumeration value="both"/>
+					<xs:enumeration value="height"/>
+					<xs:enumeration value="none"/>
+					<xs:enumeration value="width_height"/>
+					<xs:enumeration value="width"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="tableDisplayObject">
+		<xs:sequence>
+			<xs:element name="graphic" type="graphicDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="item" type="itemDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="cell" type="cellDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="attDisplayObject"/>
+		<xs:attribute name="cell_padding" type="xs:decimal"/>
+		<xs:attribute name="cell_padding_horizontal" type="xs:decimal"/>
+		<xs:attribute name="cell_padding_vertical" type="xs:decimal"/>
+		<xs:attribute name="columns" type="xs:int"/>
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="padding" type="xs:decimal"/>
+		<xs:attribute name="padding_h" type="xs:decimal"/>
+		<xs:attribute name="padding_v" type="xs:decimal"/>
+		<xs:attribute name="rows" type="xs:int"/>
+	</xs:complexType>
+	
+	<xs:complexType name="stateDisplayObject">
+		<xs:sequence>
+			<xs:element name="application" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="up|over|down|hit_test|all"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="graphic" type="graphicDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="item" type="itemDisplayObject" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="attPageDisplayObject">
+		<xs:attribute name="active" type="xs:boolean"/>
+		<xs:attribute name="classtype" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction>
+					<xs:enumeration value="GraphicChapter"/>
+					<xs:enumeration value="GraphicPage"/>
+					<xs:enumeration value="PreloadChapter"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="id" type="xs:boolean"/>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="attDisplayObject">
+		<xs:attribute name="alpha" type="xs:decimal"/>
+		<xs:attribute name="blendMode" type="xs:string"/>
+		<xs:attribute name="cacheAsBitmap" type="xs:boolean"/>
+		<xs:attribute name="height" type="xs:decimal"/>
+		<xs:attribute name="rotation" type="xs:decimal"/>
+		<xs:attribute name="scaleX" type="xs:decimal"/>
+		<xs:attribute name="scaleY" type="xs:decimal"/>
+		<xs:attribute name="visible" type="xs:boolean"/>
+		<xs:attribute name="width" type="xs:decimal"/>
+		<xs:attribute name="x" type="xs:decimal"/>
+		<xs:attribute name="y" type="xs:decimal"/>
+		<xs:anyAttribute/>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="attInteractiveObject">
+		<xs:attribute name="doubleClickEnabled" type="xs:boolean" />
+		<xs:attribute name="mouseEnabled" type="xs:boolean" />
+		<xs:attribute name="tabEnabled" type="xs:boolean" />
+		<xs:attribute name="tabIndex" type="xs:integer" />
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="attItemDisplayObject">
+		<xs:attribute name="definition" type="xs:string"/>
+		<xs:attribute name="displayindex" type="displayIndexPosition"/>
+		<xs:attribute name="dragHeight" type="xs:decimal"/>
+		<xs:attribute name="dragWidth" type="xs:decimal"/>
+		<xs:attribute name="dragX" type="xs:decimal"/>
+		<xs:attribute name="dragY" type="xs:decimal"/>
+		<xs:attribute name="enforced" type="xs:string"/>url
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="libraryClass" type="xs:string"/>
+		<xs:attribute name="type" type="objectType"/>
+		<xs:attribute name="url" type="xs:string"/>
+		<xs:attribute name="urlClass" type="xs:string"/>
+	</xs:attributeGroup>
+	
+	<xs:simpleType name="displayIndexPosition">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="top|bottom|([0-9])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="objectType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="class|image|library|mask|text|vector|video"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="graphicStyleObject">
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attributeGroup ref="attDrawingObject"/>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="attFilterObject">
+		<xs:attribute name="alpha" type="xs:decimal"/>
+		<xs:attribute name="alphas" type="xs:string"/>
+		<xs:attribute name="angle" type="xs:decimal"/>
+		<xs:attribute name="bias" type="xs:decimal"/>
+		<xs:attribute name="blurX" type="xs:decimal"/>
+		<xs:attribute name="blurY" type="xs:decimal"/>
+		<xs:attribute name="clamp" type="xs:boolean"/>
+		<xs:attribute name="color" type="xs:unsignedInt"/>
+		<xs:attribute name="colors" type="xs:string"/>
+		<xs:attribute name="componentX" type="xs:unsignedInt"/>
+		<xs:attribute name="componentY" type="xs:unsignedInt"/>
+		<xs:attribute name="distance" type="xs:decimal"/>
+		<xs:attribute name="divisor" type="xs:decimal"/>
+		<xs:attribute name="hideObject" type="xs:boolean"/>
+		<xs:attribute name="highlightAlpha" type="xs:decimal"/>
+		<xs:attribute name="highlightColor" type="xs:unsignedInt"/>
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="inner" type="xs:boolean"/>
+		<xs:attribute name="knockout" type="xs:boolean"/>
+		<xs:attribute name="mapBitmap" type="xs:string"/>
+		<xs:attribute name="mapPoint" type="xs:string"/>
+		<xs:attribute name="matrix" type="xs:string"/>
+		<xs:attribute name="matrixX" type="xs:decimal"/>
+		<xs:attribute name="matrixY" type="xs:decimal"/>
+		<xs:attribute name="mode" type="xs:string"/>
+		<xs:attribute name="preserveAlpha" type="xs:boolean"/>
+		<xs:attribute name="quality" type="xs:string"/>
+		<xs:attribute name="ratios" type="xs:string"/>
+		<xs:attribute name="scaleX" type="xs:decimal"/>
+		<xs:attribute name="scaleY" type="xs:decimal"/>
+		<xs:attribute name="shadowAlpha" type="xs:decimal"/>
+		<xs:attribute name="shadowColor" type="xs:unsignedInt"/>
+		<xs:attribute name="strength" type="xs:decimal"/>
+		<xs:attribute name="type" type="xs:string"/>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="attDrawingObject">
+		<xs:attribute name="alpha" type="xs:decimal"/>
+		<xs:attribute name="alphas" type="xs:string"/>
+		<xs:attribute name="bitmap" type="xs:string"/>
+		<xs:attribute name="caps" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="none|round|square"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="color" type="xs:unsignedInt"/>
+		<xs:attribute name="colors" type="xs:string"/>
+		<xs:attribute name="focalPointRatio" type="xs:decimal"/>
+		<xs:attribute name="interpolationMethod" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="linear_rgb|rgb"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="joints" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="bevel|miter|round"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="matrix" type="xs:string"/>
+		<xs:attribute name="miterLimit" type="xs:decimal"/>
+		<xs:attribute name="pixelHinting" type="xs:boolean"/>
+		<xs:attribute name="ratios" type="xs:string"/>
+		<xs:attribute name="repeat" type="xs:boolean"/>
+		<xs:attribute name="scaleMode" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="horizontal|none|normal|vertical"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="smooth" type="xs:boolean"/>
+		<xs:attribute name="spreadMethod" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="pad|reflect|repeat"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="styletype" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="bitmapFill|fill|gradientFill|gradientLineStyle|lineStyle"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="thickness" type="xs:decimal"/>
+		<xs:attribute name="type" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="linear|radial"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	
+	<xs:complexType name="graphicDrawDisplayObject">
+		<xs:sequence>
+			<xs:element name="anchorX" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="anchorY" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ellipseHeight" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ellipseWidth" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="height" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="radius" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="width" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="x" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="y" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="attDrawDisplayObject"/>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="attDrawDisplayObject">
+		<xs:attribute name="anchorX" type="xs:decimal"/>
+		<xs:attribute name="anchorY" type="xs:decimal"/>
+		<xs:attribute name="ellipseHeight" type="xs:decimal"/>
+		<xs:attribute name="ellipseWidth" type="xs:decimal"/>
+		<xs:attribute name="height" type="xs:decimal"/>
+		<xs:attribute name="radius" type="xs:decimal"/>
+		<xs:attribute name="width" type="xs:decimal"/>
+		<xs:attribute name="x" type="xs:decimal"/>
+		<xs:attribute name="y" type="xs:decimal"/>
+	</xs:attributeGroup>
+	
+	<xs:complexType name="eventContainerObject">
+		<xs:sequence>
+			<xs:element name="context" type="eventObject" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="event" type="eventObject" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="eventObject">
+		<xs:sequence>
+			<xs:element name="soundTransform" type="soundTransformObject" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="attEventObject"/>
+	</xs:complexType>
+	
+	<xs:complexType name="soundTransformObject">
+		<xs:attributeGroup ref="attSoundTransformObject"/>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="attEventObject">
+		<xs:attribute name="action" type="xs:string"/>
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="context" type="xs:string"/>
+		<xs:attribute name="loops" type="xs:int"/>
+		<xs:attribute name="startTime" type="xs:decimal"/>
+		<xs:attribute name="stream" type="xs:string"/>
+		<xs:attribute name="type" type="xs:string"/>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="attSoundTransformObject">
+		<xs:attribute name="leftToLeft" type="xs:decimal"/>
+		<xs:attribute name="leftToRight" type="xs:decimal"/>
+		<xs:attribute name="panning" type="xs:decimal"/>
+		<xs:attribute name="rightToLeft" type="xs:decimal"/>
+		<xs:attribute name="rightToRight" type="xs:decimal"/>
+		<xs:attribute name="volume" type="xs:decimal"/>
+	</xs:attributeGroup>
+	
+</xs:schema>

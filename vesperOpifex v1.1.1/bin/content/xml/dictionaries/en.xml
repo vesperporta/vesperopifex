@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/dictionary.schema.xsd" xsi:noNamespaceSchemaLocation="dictionary.schema.xsd">
+	<!-- title copy -->
+	<item id="title-deliminator"><![CDATA[ /    ]]></item>
+	<item id="home-title"><![CDATA[home]]></item>
+	<item id="blog-title"><![CDATA[blog]]></item>
+	<item id="vesper-opifex-title"><![CDATA[vesperOpifex]]></item>
+	<item id="actionscript-title"><![CDATA[actionscript]]></item>
+	<item id="examples-title"><![CDATA[examples]]></item>
+	<item id="links-title"><![CDATA[links]]></item>
+	<!-- button copy -->
+	<!-- font import -->
+	<!-- test text -->
+	<item id="test-text-1"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit libero at ipsum. Duis pharetra, tortor eu ornare condimentum, ipsum felis dictum tellus, sed vestibulum velit ipsum et justo. Nulla magna nisl, sollicitudin quis, scelerisque ut, ultrices ac, risus. Suspendisse enim lorem, facilisis ut, dictum sit amet, fermentum et, neque. Cras molestie ipsum id sapien. Integer massa nunc, condimentum mattis, dictum nec, accumsan nec, est. Nunc nunc mauris, malesuada vel, pretium eu, pulvinar vitae, ligula. Suspendisse lectus orci, gravida vitae, blandit eget, interdum eu, justo. Cras neque leo, pellentesque non, consectetur at, tempus quis, mauris. Suspendisse dictum euismod orci. Pellentesque aliquet. Fusce ipsum lectus, egestas ut, pharetra a, euismod eu, ligula. Sed felis mi, dignissim ut, luctus in, sollicitudin ut, tellus. Duis sagittis semper neque. Aliquam sit amet lacus fringilla odio mollis scelerisque. Phasellus est. Morbi lacinia erat. Donec in pede id risus vulputate placerat. Nam volutpat semper orci. Sed sodales facilisis urna.]]></item>
+</data>

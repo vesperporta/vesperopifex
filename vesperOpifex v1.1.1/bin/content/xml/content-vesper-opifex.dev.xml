@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/library.schema.xsd" xsi:noNamespaceSchemaLocation="library.schema.xsd">
+	<system>
+		
+	</system>
+	
+	<content>
+		
+		<item id="blog-title" x="350" y="72">
+			<xmlLib><![CDATA[generic-text]]></xmlLib>
+			<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>vesper-opifex-title</dictLib></p>]]></field>
+		</item>
+		
+		<graphic x="50" y="200" enforced="flv" id="video-0">
+			<type><![CDATA[video]]></type>
+			<url><![CDATA[http://v15.lscache1.googlevideo.com/videoplayback?id=f612108eb3074efe&itag=34&ip=193.201.135.244&signature=2EFEFEDAF17826A57FEA3DD86EFF862DDAC0D4E4.5F8B192290A90262E8D9BC59B584E04289B5FB6F&sver=2&expire=1237916208&key=yt1&ipbits=0]]></url>
+			
+			<videocontrolpanel type="simple-video-control-panel">
+				<button id="play-pause-button">
+					<state id="playing">
+						<graphic id="button0">
+							<type><![CDATA[class]]></type>
+							<urlClass><![CDATA[../../assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::PlayingButton]]></urlClass>
+						</graphic>
+					</state>
+					<state id="paused">
+						<graphic id="button1">
+							<type><![CDATA[class]]></type>
+							<urlClass><![CDATA[../../assets/swf/video-ui-resources.swf::com.vesperopifex.display.classes.VideoUiLibrary::PausedButton]]></urlClass>
+						</graphic>
+					</state>
+				</button>
+			</videocontrolpanel>
+			
+		</graphic>
+		
+	</content>
+	
+	<page active="true" classtype="GraphicPage" id="contribution" displayindex="top">
+		
+		<content>
+			
+		</content>
+		
+	</page>
+	
+	<page active="true" classtype="GraphicPage" id="donate" displayindex="top">
+		
+		<content>
+			
+		</content>
+		
+	</page>
+	
+</data>

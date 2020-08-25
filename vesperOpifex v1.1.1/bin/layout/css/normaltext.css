@@ -1,0 +1,103 @@
+﻿/**
+Flash Player supports a subset of properties in the original CSS1 specification (www.w3.org/TR/REC-CSS1). The following table shows the supported Cascading Style Sheet (CSS) properties and values, as well as their corresponding ActionScript property names. (Each ActionScript property name is derived from the corresponding CSS property name; if the name contains a hyphen, the hyphen is omitted and the subsequent character is capitalized.)
+
+CSS property		ActionScript property		Usage and supported values
+color				color						Only hexadecimal color values are supported. Named colors (such as 
+												blue) are not supported. Colors are written in the following 
+												format: #FF0000.
+display				display						Supported values are inline, block, and none.
+font-family			fontFamily					A comma-separated list of fonts to use, in descending order of 
+												desirability. Any font family name can be used. If you specify a 
+												generic font name, it is converted to an appropriate device font. The 
+												following font conversions are available: mono is converted to 
+												_typewriter, sans-serif is converted to _sans, and serif is 
+												converted to _serif.
+font-size			fontSize					Only the numeric part of the value is used. Units (px, pt) are not 
+												parsed; pixels and points are equivalent.
+font-style			fontStyle					Recognized values are normal and italic.
+font-weight			fontWeight					Recognized values are normal and bold.
+kerning				kerning						Recognized values are true and false. Kerning is supported for 
+												embedded fonts only. Certain fonts, such as Courier New, do not 
+												support kerning. The kerning property is only supported in SWF files 
+												created in Windows, not in SWF files created on the Macintosh. 
+												However, these SWF files can be played in non-Windows versions of 
+												Flash Player and the kerning still applies.
+leading				leading						The amount of space that is uniformly distributed between lines. The 
+												value specifies the number of pixels that are added after each line. 
+												A negative value condenses the space between lines. Only the numeric 
+												part of the value is used. Units (px, pt) are not parsed; pixels and 
+												points are equivalent.
+letter-spacing		letterSpacing				The amount of space that is uniformly distributed between characters. 
+												The value specifies the number of pixels that are added after each 
+												character. A negative value condenses the space between characters. 
+												Only the numeric part of the value is used. Units (px, pt) are not 
+												parsed; pixels and points are equivalent.
+margin-left			marginLeft					Only the numeric part of the value is used. Units (px, pt) are not 
+												parsed; pixels and points are equivalent.
+margin-right		marginRight					Only the numeric part of the value is used. Units (px, pt) are not 
+												parsed; pixels and points are equivalent.
+text-align			textAlign					Recognized values are left, center, right, and justify.
+text-decoration		textDecoration				Recognized values are none and underline.
+text-indent			textIndent					Only the numeric part of the value is used. Units (px, pt) are not 
+												parsed; pixels and points are equivalent. 
+*/
+
+.main-title 
+{
+	font-family:	Adobe Garamond Pro;
+	font-size:		30;
+}
+
+.futura 
+{
+	font-family:	_FuturaLight;
+}
+
+.rss-channel 
+{
+	font-family:	_FuturaBook;
+}
+
+.rss-h1 
+{
+	font-family:	_FuturaHeavy;
+	font-size:		30;
+}
+
+.rss-h2 
+{
+	font-family:	_FuturaHeavy;
+	font-size:		20;
+}
+
+.rss-p 
+{
+	font-family:	_FuturaBook;
+	font-size:		12;
+}
+
+.rss-p-date 
+{
+	font-family:	_FuturaLight;
+	font-size:		12;
+}
+
+.rss-p-comments 
+{
+	font-family:	_FuturaHeavy;
+	font-size:		10;
+	color:			#888888;
+}
+
+.button-normal 
+{
+	font-family:	_FuturaMedium;
+	font-size:		20;
+}
+
+.main-menu-button 
+{
+	font-family:	Adobe Garamond Pro;
+	font-size:		20;
+	color:			#888888;
+}

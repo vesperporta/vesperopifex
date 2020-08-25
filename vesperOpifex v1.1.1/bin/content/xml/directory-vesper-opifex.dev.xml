@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/directory.schema.xsd" xsi:noNamespaceSchemaLocation="directory.schema.xsd">
+	<xmlLib active="true"><![CDATA[../xml/lib.dev.xml]]></xmlLib>
+	<dictionary active="true" type="base"><![CDATA[../xml/dictionaries/]]></dictionary>
+	<dictionary active="true" type="default"><![CDATA[en]]></dictionary>
+	<dictionary active="true"><![CDATA[fr]]></dictionary>
+	<dictionary active="true"><![CDATA[jp]]></dictionary>
+	<animation><![CDATA[../xml/animation/general.xml]]></animation>
+	<content active="true"><![CDATA[../xml/content-vesper-opifex.xml]]></content>
+</data>

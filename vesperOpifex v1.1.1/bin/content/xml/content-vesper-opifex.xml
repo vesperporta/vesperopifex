@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns:xsi="http://vesper-opifex.googlecode.com/svn/trunk/docs/library.schema.xsd" xsi:noNamespaceSchemaLocation="library.schema.xsd">
+	<system>
+		
+	</system>
+	
+	<content>
+		
+		<item id="blog-title" x="350" y="72">
+			<xmlLib><![CDATA[generic-text]]></xmlLib>
+			<field><![CDATA[<p class="main-title"><dictLib>title-deliminator</dictLib><dictLib>vesper-opifex-title</dictLib></p>]]></field>
+		</item>
+		
+		<graphic x="50" y="200" enforced="flv" id="video-0">
+			<type><![CDATA[video]]></type>
+			<url><![CDATA[http://www.youtube.com/get_video?video_id=yD3w6mlDRnQ&t=OEgsToPDskJ0kLUbh84ShC3DgFNY2nV8]]></url>
+		</graphic>
+		
+	</content>
+	
+	<page active="true" classtype="GraphicChapter" id="contribution" displayindex="top">
+		
+		<content>
+			
+		</content>
+		
+	</page>
+	
+	<page active="true" classtype="GraphicChapter" id="donate" displayindex="top">
+		
+		<content>
+			
+		</content>
+		
+	</page>
+	
+</data>
